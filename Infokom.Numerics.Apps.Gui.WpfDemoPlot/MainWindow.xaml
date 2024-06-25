@@ -6,8 +6,9 @@
         xmlns:ScottPlot="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF"
         xmlns:local="clr-namespace:Infokom.Numerics.Apps.Gui.WpfDemoPlot"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="MainWindow" Height="800" Width="800" Loaded="Window_Loaded">
 	<DockPanel LastChildFill="True">
-		<ScottPlot:WpfPlot x:Name="WpfPlot" />
+		<ScottPlot:WpfPlot x:Name="WpfPlot">
+		</ScottPlot:WpfPlot>
 	</DockPanel>
 </Window>

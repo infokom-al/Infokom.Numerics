@@ -10,6 +10,24 @@ namespace Infokom.Numerics.Extensions
 
 	internal static class TupleExtensions
 	{
+		
+
+		public static (T X, T Y) To<T>(this (IConvertible X, IConvertible Y) source) where T : IFloatingPointIeee754<T> => ((T)source.X, (T)source.Y);
+		public static (T X, T Y, T Z) To<T>(this (IConvertible X, IConvertible Y, IConvertible Z) source) where T : IFloatingPointIeee754<T> => ((T)source.X, (T)source.Y, (T) source.Z);
+
+		public static (Tx X, Ty Y) To<Tx, Ty>(this (IConvertible X, IConvertible Y) source) => ((Tx)source.X, (Ty)source.Y);
+		public static (Tx X, Ty Y, Tz Z) To<Tx, Ty, Tz>(this (IConvertible X, IConvertible Y, IConvertible Z) source) => ((Tx)source.X, (Ty)source.Y, (Tz)source.Z);
+
+
+
+		public static (double X, double Y) ToDouble(this (IConvertible X, IConvertible Y) point, IFormatProvider formatProvider) => (point.X.ToDouble(formatProvider), point.Y.ToDouble(formatProvider));
+		public static (double X, double Y, double Z) ToDouble(this (IConvertible X, IConvertible Y, IConvertible Z) point, IFormatProvider formatProvider) => (point.X.ToDouble(formatProvider), point.Y.ToDouble(formatProvider), point.Z.ToDouble(formatProvider));
+
+		public static (double X, double Y) ToDouble(this (IConvertible X, IConvertible Y) point) => point.ToDouble(null);
+		public static (double X, double Y, double Z) ToDouble(this (IConvertible X, IConvertible Y, IConvertible Z) point) => point.ToDouble(null);
+
+
+
 
 		public static T Norm<T>(this (T X, T Y) source) where T : IFloatingPointIeee754<T>
 		{

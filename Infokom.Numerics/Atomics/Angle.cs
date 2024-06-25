@@ -115,7 +115,7 @@ namespace Infokom.Numerics.Atomics
 
 
 
-
+		public double Rad => this.value;
 
 		public static implicit operator Angle(double rad) => new Angle(double.Atan2(sin(rad), cos(rad)));
 

@@ -16,44 +16,36 @@ namespace Infokom.Numerics
 		public static readonly T e = T.E;
 		public static readonly T τ = T.Tau;
 
-		public static T cos(T x) => T.Cos(x);
-		public static T sin(T x) => T.Sin(x);
-		public static T tan(T x) => T.Tan(x);
-		public static T acos(T x) => T.Acos(x);
-		public static T asin(T x) => T.Asin(x);
-		public static T atan(T x) => T.Atan(x);
-		public static T atan2(T y, T x) => T.Atan2(y, x);
 
-		public static T cosπ(T x) => T.CosPi(x);
-		public static T sinπ(T x) => T.SinPi(x);
-		public static T tanπ(T x) => T.TanPi(x);
-		public static T acosπ(T x) => T.AcosPi(x);
-		public static T asinπ(T x) => T.AsinPi(x);
-		public static T atanπ(T x) => T.AtanPi(x);
-		public static T atan2π(T y, T x) => T.Atan2Pi(y, x);
+		public static readonly Func<T, T> cos = T.Cos;
 
-		public static T cosh(T x) => T.Cosh(x);
-		public static T sinh(T x) => T.Sinh(x);
-		public static T tanh(T x) => T.Tanh(x);
-		public static T acosh(T x) => T.Acosh(x);
-		public static T asinh(T x) => T.Asinh(x);
-		public static T atanh(T x) => T.Atanh(x);
+		public static Func<T, T> sin = T.Sin;
+		public static Func<T, T> tan = T.Tan;
+		public static Func<T, T> acos = T.Acos;
+		public static Func<T, T> asin = T.Asin;
+		public static Func<T, T> atan = T.Atan;
+		public static Func<T, T, T> atan2 => T.Atan2Pi;
 
-		public static T sqrt(T x) => T.Sqrt(x);
-		public static T cbrt(T x) => T.Cbrt(x);
-		public static T root(T x, int n) => T.RootN(x, n);
-		public static T hypot(T x, T y) => T.Hypot(x, y);
+		public static Func<T, T> cosπ = T.CosPi;
+		public static Func<T, T> sinπ = T.SinPi;
+		public static Func<T, T> tanπ = T.TanPi;
+		public static Func<T, T> acosπ = T.AcosPi;
+		public static Func<T, T> asinπ = T.AsinPi;
+		public static Func<T, T> atanπ = T.AtanPi;
+		public static Func<T, T, T> atan2π => T.Atan2Pi;
 
+		public static Func<T, T> cosh = T.Cosh;
+		public static Func<T, T> sinh = T.Sinh;
+		public static Func<T, T> tanh = T.Tanh;
+		public static Func<T, T> acosh = T.Acosh;
+		public static Func<T, T> asinh = T.Asinh;
+		public static Func<T, T> atanh = T.Atanh;
 
-		public static T norm(T x, T y, T z) => T.Hypot(T.Hypot(x, y), z);
-
-
-
-
-
-
-
+		public static Func<T, T> sqrt = T.Sqrt;
+		public static Func<T, T> cbrt = T.Cbrt;
+		public static Func<T, int, T> root = T.RootN;
+		public static Func<T, T, T> hypot = T.Hypot;
+		public static Func<T, T, T, T> lerp = T.Lerp;
 	}
-
 #pragma warning restore IDE1006 // Naming Styles
 }
