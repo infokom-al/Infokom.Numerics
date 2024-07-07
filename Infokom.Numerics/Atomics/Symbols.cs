@@ -17,12 +17,12 @@ namespace Infokom.Numerics.Atomics
 	{
 		private const string
 			SUP_K = "0i23456789+-=()n",
-			SUP_V = "⁰¹ⁱ²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿ";
+			SUP_V = "⁰¹ⁱ²³⁴⁵⁶⁷⁸⁹⁺⁻⁼⁽⁾ⁿᵃᵇᶜᵈᵉᶠᵍʰⁱʲᵏˡᵐⁿᵒᵖʳˢᵗᵘᵛʷˣʸᶻ";
 		public static IReadOnlyDictionary<char, char> Sup { get; } = Enumerable.Zip(SUP_K, SUP_V).ToImmutableDictionary(x => x.First, x => x.Second);
 
 		private const string
 			SUB_K = "023456789+-=()n",
-			SUB_V = "₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎ₐₑₒₓₔₕₖₗₘₙₚₛₜ";
+			SUB_V = "₀₁₂₃₄₅₆₇₈₉₊₋₌₍₎ₐₑₒₓₔₕₖₗₘₙₚₛₜₐₑₕᵢⱼₖₗₘₙₒₚᵣₛₜᵤᵥₓ";
 		public static IReadOnlyDictionary<char, char> Sub { get; } = Enumerable.Zip(SUB_K, SUB_V).ToImmutableDictionary(x => x.First, x => x.Second);
 	}
 

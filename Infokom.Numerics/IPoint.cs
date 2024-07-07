@@ -36,4 +36,21 @@ namespace Infokom.Numerics
 	}
 
 
+	public interface IPoint<TPoint> : IReadOnlyList<double> where TPoint : IPoint<TPoint>
+	{
+
+
+
+		static abstract TPoint Create(Func<int, double> coordinateSelector);
+		static abstract TPoint Create(IEnumerable<double> coordinates);
+	}
+
+
+
+	public interface ICurve<TPoint>
+	{
+		public TPoint this[double t] { get; }
+		public double Length { get; }
+	}
+
 }

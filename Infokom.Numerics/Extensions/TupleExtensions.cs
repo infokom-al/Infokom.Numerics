@@ -29,20 +29,6 @@ namespace Infokom.Numerics.Extensions
 
 
 
-		public static T Norm<T>(this (T X, T Y) source) where T : IFloatingPointIeee754<T>
-		{
-			var (x, y) = source;
-
-			return T.Sqrt(x * x + y * y);
-		}
-
-		public static T Norm<T>(this (T X, T Y, T Z) source) where T : IFloatingPointIeee754<T>
-		{
-			var (x, y, z) = source;
-
-			return T.Sqrt(x * x + y * y + z * z);
-		}
-
 		public static double Norm<Tx, Ty, Tz>(this (Tx X, Ty Y, Tz Z) source) 
 			where Tx : IMultiplyOperators<Tx, Tx, double>
 			where Ty : IMultiplyOperators<Ty, Ty, double>
